@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ListBarangController;
 use App\Http\Controllers\MusikController;
+use App\Http\Controllers\RyshaController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
@@ -35,3 +36,7 @@ Route::get('listbarang/{id}/{nama}', [ListBarangController::class, 'tampilkan',]
 Route::get('/login', [MusikController::class, 'login']);
 Route::get('/dashboard', [MusikController::class, 'dashboard']);
 Route::get('/listMusik', [MusikController::class, 'listMusik']);
+
+Route::get('rysha', [RyshaController::class, 'tampil']);
+Route::get('P5', [RyshaController::class, 'tampil_P5']);
+
